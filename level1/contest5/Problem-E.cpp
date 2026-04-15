@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <vector>
 #include <cmath>
+#include <string>
 using namespace std;
 
 int main (){
@@ -12,20 +13,24 @@ int main (){
     long long x;
     cin>>x;
     string s;
+    string w="";
     s=to_string(x);
     int size =s.size();
-    int first=s[0]-'0'; // to conevrt the ascii shit to a real number 
-    int ans=(size-1)*9+first; 
-    if (size>s[0]*size){  // i should compare like 679 with 666 , if it greater or smaller 
-        ans=ans;
+        for (int i = 0; i < s.size(); i++) {
+        w += s[0];
     }
+ 
+    int n = stoll(w);
+    int first=s[0]-'0'; 
+    int ans=(size-1)*9+first; 
+    if (x>=n){  
+        ans=ans;
+    }  
     else {
         ans=ans-1;
     }
 
-    cout<<x<<endl;
-    cout<<size<<endl;
-    cout<<first<<endl;
+
     cout<<ans<<endl;
 
     }
